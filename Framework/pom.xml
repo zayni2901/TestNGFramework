@@ -78,15 +78,18 @@
 				<configuration>
 					<suiteXmlFiles>
 						
-						<suiteXmlFile>XMLfiles/testng.xml</suiteXmlFile>
+						<suiteXmlFile>XMLfiles/${xmlFiles}</suiteXmlFile>
 					</suiteXmlFiles>
 					
 					<systemProperties>
 						<browser>
 							{browser}
 						</browser>
-						
+							<appURL>
+							{urlTobeTested}
+						</appURL>
 					</systemProperties>
+					
 				</configuration>
 			</plugin>
 

@@ -45,12 +45,12 @@ public class BaseClass {
 		
 		
 	}
-	@Parameters("browser")
+	@Parameters({"browser","urlTobeTested"})
 	@BeforeClass
-	public void setup(String browser) {
+	public void setup(String browser, String url) {
 		Reporter.log("Trying to start Browser",true);
 		//driver = BrowserFactory.startApplication(driver,config.getBrowser(), config.getStagingURl());
-		driver = BrowserFactory.startApplication(driver,browser, config.getStagingURl());
+		driver = BrowserFactory.startApplication(driver,browser, url);
 		Reporter.log("Browser has been started",true);
 
 	}
